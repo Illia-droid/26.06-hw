@@ -1,0 +1,50 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #af9d9d;
+}
+
+.title {
+    display: block;
+    position: relative;
+    width: 400px;
+    
+    margin:200px auto;
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 999;
+    background-color: pink;
+    text-align: center;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    display: block;
+    height: 5px;
+    transition: 0.8s ease-in-out;
+}
+
+.title::before{
+    width: 0;
+    background-color: #3512c0;
+}
+
+
+.title::after {
+    position: absolute;
+    right: 0;
+    left: 100%;
+    background-color: yellow;
+}
+
+.title:hover::before {
+    width: 100%;
+
+}
+
+.title:hover::after {
+    left: 0;
+}
